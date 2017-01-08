@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<hibernate-configuration>
+
+	<property name="connection.server">localhost</property>
+        <property name="connection.user">root</property>
+        <property name="connection.password">root</property>
+        <property name="connection.database">test</property>
+
+	<!-- List of xml mapping file -->
+	<mapping resource="subject.hbm.xml"/>
+	<mapping resource="teacher.hbm.xml"/>
+	
+
+
+</hibernate-configuration>
+

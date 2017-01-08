@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<hibernate-configuration>
+
+	<property name="connection.server">localhost</property>
+        <property name="connection.user">root</property>
+        <property name="connection.password">root</property>
+        <property name="connection.database">test</property>
+
+
+	<!-- List of xml mapping file -->
+	<mapping resource="employee.hbm.xml"/>
+	<mapping resource="employeeDetails.hbm.xml"/>
+	<mapping resource="person.hbm.xml"/>
+	<mapping resource="certificate.hbm.xml"/>
+	<mapping resource="meeting.hbm.xml"/>
+	<mapping resource="customer.hbm.xml"/>
+	<mapping resource="chair.hbm.xml"/>
+
+</hibernate-configuration>
+

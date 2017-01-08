@@ -1,0 +1,9 @@
+
+
+
+ g++ employeeTest.cpp employee.cpp person.cpp 
+	student.cpp employeeDetails.cpp 
+	meeting.cpp chair.cpp customer.cpp 
+	certificate.cpp sessionfactory.cpp 
+	XmlParser.cpp mySqlConnectivity.cpp 
+	-L/usr/include/mysql -lmysqlclient -Iusr/include/mysql -ltinyxml

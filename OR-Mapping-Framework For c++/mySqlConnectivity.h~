@@ -1,0 +1,19 @@
+#include <mysql/mysql.h>
+
+struct connection_details
+{
+    char *server;
+    char *user;
+    char *password;
+    char *database;
+};
+
+class mySqlConnectivity{
+
+public:
+
+MYSQL* mysql_connection_setup(struct connection_details);
+MYSQL_RES* mysql_perform_query(MYSQL *, char *);
+
+
+};

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<hibernate-mapping>
+ <class name="Employee" table="Employee">
+  <id name="id" column="EMPLOYEE_ID" type="int">
+	<generator class="native"/>
+  </id>
+  
+  
+ 
+  
+  <one-to-one name="EmployeeDetails"/>
+  <property name="firstname" type="string">
+	<column name="Firstname" not-null="true" unique="true" default="siddhesh"/>
+  </property>
+  
+  <property name="lastname" column="Lastname" type="string"/>
+  <property name="birthdate" column="Birthdate" type="string"/>
+  <property name="cellphone" column="Cellphone" type="string"/>
+ </class>
+</hibernate-mapping>
+   

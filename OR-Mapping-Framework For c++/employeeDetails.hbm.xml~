@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<hibernate-mapping>
+ <class name="EmployeeDetails" table="EmployeeDetails">
+  <id name="id" column="ID" type="int">
+	<generator class="foreign"/>
+  </id>
+  <!--<one-to-one name="Employee" constrained="true"/>-->
+  
+  <property name="street" column="Street" type="string"/>
+	
+
+  <property name="city" column="City" type="string"/>
+  <property name="state" column="State" type="string"/>
+  <property name="country" column="Country" type="string"/>
+
+  
+ </class>
+</hibernate-mapping>
+   

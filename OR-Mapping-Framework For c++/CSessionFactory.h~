@@ -1,0 +1,8 @@
+class cSessionFactory
+{
+ public:
+	
+     void openSession();
+     void save(Session *s);
+     void close();
+};

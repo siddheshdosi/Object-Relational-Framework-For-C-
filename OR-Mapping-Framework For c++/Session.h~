@@ -1,0 +1,21 @@
+#ifndef SESSION_FACTORY___H
+#define SESSION_FACTORY___H
+#include<string>
+#include<vector>
+using namespace std;
+
+class Session{
+ public:
+	 virtual string serialize()=0; 
+	 virtual Session *getobj(){
+		return NULL;
+	 }
+	virtual vector<Session *> *getobj(){
+		vector<Session *> *v;
+		return v;
+	}	
+};
+
+
+
+#endif

@@ -1,0 +1,53 @@
+//#ifdef
+#include<iostream>
+#include<string>
+
+#include"employee.h"
+
+
+#include"meeting.h"
+
+#include"Sessionfactory.h"
+#include<typeinfo>
+#include<vector>
+
+using namespace std;
+
+int main(){
+	
+	
+	
+	Session *m1 = new Meeting("Data Modeling project meeting","10-04-2014");
+	Session *m2 = new Meeting("Big Data","15-04-2014");
+	vector<Meeting*> *meeting= new vector <Meeting*> ();;
+	meeting->push_back((Meeting*)m1);
+	meeting->push_back((Meeting*)m2);
+	
+	Session *e1 = new Employee("siddhesh","dosi","23-08-1990","9001156287",meeting);
+	Session *e2 = new Employee("Nikhil","shah","29-03-1991","9413625222",meeting);
+	//Session *s4 = new Employee("Rakesh","Rajpurohit","23-12-1990","9001456343");
+	
+	
+	cSessionFactory sf;
+	sf.openSession();
+	sf.save(e1);
+	sf.save(e2);
+	
+	
+	vector<Session *>sess=sf.get(customer1,"all","*");
+	
+	for(int i=0;i<sess.size();i++){
+		cout<<"name of the customer is ="<<((Customer *)sess[i])->getname()<<endl;
+		
+		
+	}
+	
+	
+	//s1=sf.get(customer1,"all","*");
+	//sf.save(m1);
+	//sf.save(m2);
+	//sf.save(ch);
+	
+	sf.close();
+	return 0;	
+}

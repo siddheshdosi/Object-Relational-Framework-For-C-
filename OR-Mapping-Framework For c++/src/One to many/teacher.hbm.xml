@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<hibernate-mapping>
+ <class name="Teacher" table="Teacher">
+  <id name="t_id" column="Teacher_ID" type="int">
+	<generator class="native"/>
+  </id>
+  
+  <set name="Subject" cascade="all">
+	<one-to-many class="Subject"/>         
+	<key column="Teacher_ID"/>
+         
+ </set>
+ 
+  
+ 
+  <property name="t_name" type="string">
+	<column name="Name" not-null="true" unique="true" default="siddhesh"/>
+  </property>
+ 
+  <property name="t_cabin" column="Cabin" type="string"/>
+  
+  <property name="cellphone" column="Cellphone" type="string"/>
+ </class>
+</hibernate-mapping>
+   

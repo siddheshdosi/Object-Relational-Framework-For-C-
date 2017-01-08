@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<hibernate-mapping>
+ <class name="Subject" table="Subject">
+  <id name="s_id" column="subject_ID" type="int">
+	<generator class="native"/>
+  </id>	  
+  <many-to-one name="Teacher" class="Teacher">
+            <column name="Teacher_ID" not-null="true" />
+  </many-to-one> 
+ 
+
+  <property name="s_name" column="subject_name" type="string"/>	
+  <property name="Teacher_ID" column="Teacher_ID" type="string"/> 
+ </class>
+</hibernate-mapping>
+   

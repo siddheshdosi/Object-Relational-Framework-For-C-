@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<hibernate-mapping>
+ <class name="Chair" table="Chair">
+  <id name="chairid" column="ID" type="int">
+	<generator class="foreign"/>
+  </id>
+  <one-to-one name="Employee" constrained="true"/> 
+  
+  <property name="chairLocation" column="Chair_Location" type="string"/>
+	
+
+  
+ </class>
+</hibernate-mapping>
+   

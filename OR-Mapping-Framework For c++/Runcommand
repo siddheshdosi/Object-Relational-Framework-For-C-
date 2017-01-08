@@ -1,0 +1,16 @@
+For runinng this framework first you have to open 
+terminal and then set path where you have your c++ 
+classes and then run following command on your 
+terminal. Yu have to write your .cpp file name 
+instead of wite .cpp file below except "XmlParser.cpp" 
+and "mySqlConnectivity.cpp". 
+
+
+
+ g++ employeeTest.cpp employee.cpp person.cpp 
+	student.cpp employeeDetails.cpp 
+	meeting.cpp chair.cpp customer.cpp 
+	certificate.cpp sessionfactory.cpp 
+	XmlParser.cpp mySqlConnectivity.cpp 
+	-L/usr/include/mysql -lmysqlclient 
+	-Iusr/include/mysql -ltinyxml

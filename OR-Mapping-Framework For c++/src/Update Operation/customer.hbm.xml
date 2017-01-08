@@ -1,0 +1,23 @@
+ <?xml version="1.0"?>
+<hibernate-mapping>
+ <class name="Customer" table="Customer">
+  <id name="id" column="Customer_ID" type="int">
+	<generator class="native"/>
+  </id>
+  
+  
+  
+  
+  <property name="name" type="string">
+	<column name="Name" not-null="true" unique="true" />
+  </property>
+  
+  <property name="street" column="Street" type="string"/>
+  <property name="city" column="City" type="string"/>
+  <property name="state" column="State" type="string"/>
+  <property name="country" column="Country" type="string"/>
+  <property name="mobno" column="Mobile_No" type="string"/>
+  
+ </class>
+</hibernate-mapping>
+   
